@@ -210,7 +210,7 @@ export class WMTS extends L.TileLayer {
         }
       ]));
     const layer = layers[this._wmtsParams.LAYER];
-    const tileMatrixLabels = tileMatrixSetsLabels[layer.tileMatrixSet]; // The labels for the set used by our layer
+    const tileMatrixLabels = tileMatrixSetsLabels[this._wmtsParams.TILEMATRIXSET ?? layer.tileMatrixSet]; // The labels for the set used by our layer
 
     // Only set params that were not explicitly provided.
     // We make the assumption that even if the user explicitly provided "default" for
